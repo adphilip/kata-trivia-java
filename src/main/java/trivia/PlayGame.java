@@ -22,7 +22,7 @@ public class PlayGame {
       for (int i = 1; i <= playerCount; i++) {
          System.out.print("Player "+i+" name: ");
          String playerName = scanner.nextLine();
-         aGame.add(playerName);
+         aGame.addPlayerName(playerName);
       }
 
       System.out.println("\n\n--Starting game--");
@@ -32,7 +32,7 @@ public class PlayGame {
       do {
          int roll = readRoll();
          aGame.roll(roll);
-
+         aGame.askQuestion();
          System.out.print(">> Was the answer correct? [y/n] ");
          boolean correct = readYesNo();
          if (correct) {

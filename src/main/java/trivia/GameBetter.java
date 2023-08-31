@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 
 // REFACTOR ME
-public class GameBetter extends Game implements IGame {
+public class GameBetter extends Game {
    private final ArrayList players;
    int[] places = new int[6];
    int[] purses = new int[6];
@@ -55,7 +55,7 @@ public class GameBetter extends Game implements IGame {
    }
 
 
-   private void askQuestion() {
+   public void askQuestion() {
       if (currentCategory().equals("Pop"))
          System.out.println(popQuestions.removeFirst());
       if (currentCategory().equals("Science"))

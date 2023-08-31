@@ -36,7 +36,7 @@ public class Game implements IGame {
       return (howManyPlayers() >= 2);
    }
 
-   public boolean add(String playerName) {
+   public boolean addPlayerName(String playerName) {
 
 
       players.add(playerName);
@@ -89,7 +89,7 @@ public class Game implements IGame {
 
    }
 
-   private void askQuestion() {
+   public void askQuestion() {
       if (currentCategory() == "Pop")
          System.out.println(popQuestions.removeFirst());
       if (currentCategory() == "Science")
